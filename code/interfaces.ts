@@ -47,7 +47,18 @@ const oldCivic = {
 // error because oldCivic doesn't match description of Vehicle
 // printVehicle(oldCivic);
 
+const drink = {
+  color: 'brown',
+  carbonated: true,
+  sugar: 40,
+  summary(): string {
+    return `My drink has ${this.sugar} grams of sugar`;
+  },
+};
+
 const printSummary = (item: Reportable): void => {
   console.log(item.summary());
 };
+
 printSummary(civic);
+printSummary(drink);
