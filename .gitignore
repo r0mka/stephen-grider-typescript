@@ -1,3 +1,6 @@
 .DS_Store
 practice/
 code/node_modules
+1-maps/node_modules
+1-maps/.cache
+1-maps/dist
