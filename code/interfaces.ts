@@ -60,6 +60,5 @@ const printSummary = (item: Reportable): void => {
   console.log(item.summary());
 };
 
-// comment
 printSummary(civic);
 printSummary(drink);
