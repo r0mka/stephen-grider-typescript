@@ -6,3 +6,8 @@ const company = new Company();
 
 console.log(user);
 console.log(company);
+
+const map = new google.maps.Map(document.getElementById('map'), {
+  zoom: 1,
+  center: { lat: user.location.lat, lng: user.location.lng },
+});
