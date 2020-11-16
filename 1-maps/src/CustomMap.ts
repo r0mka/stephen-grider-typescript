@@ -12,8 +12,21 @@ export class CustomMap {
       }
     );
   }
-  addUserMarker(user: User): void {}
-  addCompanyMarker(company: Company): void {}
+  addUserMarker(user: User): void {
+    new google.maps.Marker({
+      position: { lat: user.location.lat, lng: user.location.lng },
+      map: this.googleMap,
+    });
+  }
+  addCompanyMarker(company: Company): void {
+    new google.maps.Marker({
+      position: {
+        lat: company.location.lat,
+        lng: company.location.lng,
+      },
+      map: this.googleMap,
+    });
+  }
 }
 
 // new google.maps.Marker({position: {lat: -34, lng: 151}, map: map});
