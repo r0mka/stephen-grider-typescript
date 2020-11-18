@@ -1,6 +1,10 @@
 .DS_Store
 practice/
 code/node_modules
+2-sort/node_modules
+2-sort/.cache
+2-sort/dist
+2-sort/build
 1-maps/node_modules
 1-maps/.cache
 1-maps/dist
