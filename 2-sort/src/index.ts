@@ -4,21 +4,24 @@ import { LinkedList } from './LinkedList';
 
 import { Sorter } from './Sorter';
 
-// const numbersCollection = new NumbersCollection([10, 3, -5, 0]);
-// const numberSorter = new Sorter(numbersCollection);
-// numberSorter.sort();
-// console.log(numbersCollection);
+const numbersCollection = new NumbersCollection([10, 3, -5, 0]);
 
-// const charachtersCollection = new CharachtersCollection('RomanoFf');
-// const sorter = new Sorter(charachtersCollection);
-// sorter.sort();
+numbersCollection.sort();
 
-// console.log(charachtersCollection);
+console.log(numbersCollection.data);
 
-const list = new LinkedList();
-for (let i = 1; i < 11; i++)
-  list.add(Math.floor(Math.random() * 100));
+const charachtersCollection = new CharachtersCollection('RomanoFf');
 
-const sorter = new Sorter(list);
-sorter.sort();
-list.print();
+charachtersCollection.sort();
+
+console.log(charachtersCollection);
+
+const linkedList = new LinkedList();
+linkedList.add(-5);
+linkedList.add(100);
+linkedList.add(-2);
+linkedList.add(43);
+linkedList.add(23);
+
+linkedList.sort();
+linkedList.print();
