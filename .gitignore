@@ -1,6 +1,10 @@
 .DS_Store
 practice/
 code/node_modules
+4-web/node_modules
+4-web/.cache
+4-web/dist
+4-web/build
 3-stats/node_modules
 3-stats/.cache
 3-stats/dist
