@@ -1,12 +1,6 @@
 import { MatchReader } from './MatchReader';
 import { CsvFileReader } from './CsvFileReader';
-
-// enum - enumeration
-export enum MatchResult {
-  HomeWin = 'H',
-  AwayWin = 'A',
-  Draw = 'D',
-}
+import { MatchResult } from './MatchResult';
 
 // Create an object that satisfies the DataReader interface
 const csvFileReader = new CsvFileReader('football.csv');
