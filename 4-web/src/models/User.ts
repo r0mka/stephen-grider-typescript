@@ -1,4 +1,5 @@
 import { Eventing } from './Eventing';
+import { Sync } from './Sync';
 export interface UserProps {
   id?: number;
   name?: string;
@@ -15,9 +16,10 @@ export interface UserProps {
 // Option #3
 // Only accept properties into constructor
 // Hard code dependencies as class properties
-
+const rootUrl = 'https://localhost:3000/users';
 export class User {
   public events: Eventing = new Eventing();
+  public sync: Sync<UserProps> = new Sync<UserProps>(rootUrl);
 
   constructor(private data: UserProps) {}
   get(propName: string): number | string {
