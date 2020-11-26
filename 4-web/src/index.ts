@@ -3,8 +3,8 @@ import { User } from './models/User';
 const user = new User({ name: 'new record', age: 0 });
 
 user.on('change', () => {
-  console.log('CHANGE');
+  console.log('USER CHANGED');
 });
-user.trigger('change');
 
-console.log(user.get('name'));
+user.set({ name: 'New name' });
+console.log(user);
