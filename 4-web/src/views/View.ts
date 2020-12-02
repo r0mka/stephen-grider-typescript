@@ -40,6 +40,7 @@ export abstract class View<T extends Model<K>, K> {
       if (element) this.regions[key] = element;
     }
   }
+  onRender(): void {}
 
   render(): void {
     this.parent.innerHTML = '';
@@ -47,6 +48,9 @@ export abstract class View<T extends Model<K>, K> {
     templateElement.innerHTML = this.template();
     this.bindEvents(templateElement.content);
     this.mapRegions(templateElement.content);
+
+    this.onRender();
+
     this.parent.append(templateElement.content);
   }
 }
