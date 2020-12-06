@@ -23,7 +23,7 @@ router.post('/login', (req: Request, res: Response) => {
   if (email) {
     res.send(email.toUpperCase());
   } else {
-    res.status(400).send('No email');
+    res.send('No email');
   }
 });
 
