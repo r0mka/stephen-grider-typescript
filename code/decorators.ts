@@ -8,6 +8,7 @@ class Boat {
   @logError
   pilot(): void {
     throw new Error();
+    console.log('swish');
   }
 }
 
@@ -16,6 +17,16 @@ function logError(
   key: string,
   desc: PropertyDescriptor
 ): void {
-  console.log('Target: ', target);
-  console.log('Key: ', key);
+  const method = desc.value;
+
+  desc.value = function () {
+    try {
+      method();
+    } catch (e) {
+      console.log('OOPS BOAT WAS SUNK');
+    }
+  };
 }
+
+const boat = new Boat();
+boat.pilot();
