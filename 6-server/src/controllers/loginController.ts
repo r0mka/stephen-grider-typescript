@@ -52,4 +52,9 @@ class LoginController {
       res.send('Invalid email or password');
     }
   }
+  @get('/logout')
+  logout(req: Request, res: Response): void {
+    req.session = undefined;
+    res.redirect('/');
+  }
 }
