@@ -25,4 +25,19 @@ class LoginController {
               </form>
             `);
   }
+
+  postLogin(req: RequestWithBody, res: Response): void {
+    const { email, password } = req.body;
+    if (
+      email &&
+      password &&
+      email === 'hi@hi.com' &&
+      password === 'password'
+    ) {
+      req.session = { loggedIn: true };
+      res.redirect('/');
+    } else {
+      res.send('Invalid email or password');
+    }
+  }
 }
