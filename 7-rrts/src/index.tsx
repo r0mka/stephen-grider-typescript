@@ -11,7 +11,12 @@ interface AppProps {
 }
 class App extends React.Component<AppProps> {
   render() {
-    return <div>{this.props.color}</div>;
+    return (
+      <div>
+        <h1>React</h1>
+        {this.props.color}
+      </div>
+    );
   }
 }
 
